@@ -1,46 +1,102 @@
-=======
-# Genesis Sample Theme (with Sass & Grunt)
+Genesis Sample Theme with Sass
+===
 
-Github project link: https://github.com/gregrickaby/genesis-sample/tree/sass
+This fork includes modern development tools like Grunt, Sass, PostCSS, and Bourbon. I *try* to keep it up to date with Genesis 2.0+ development. Your pull requests are welcome. Now, go get Sassy!
 
-This fork includes Sass and Grunt (and even the Grunt sound). I *try* to keep it up to date with Genesis 2.0 development. Your pull requests are welcome. Now, go get Sassy!
+## Features
+* [Grunt](https://github.com/gruntjs/grunt)
+* [Sass](https://github.com/sass/node-sass) (LibSass)
+* [PostCSS](https://github.com/postcss/postcss)
+* [Bourbon](http://bourbon.io/)
+* [LiveReload](https://github.com/livereload/LiveReload)
+* Image optimization
+* Script linting and CSS minifcation
 
-## Theme Installation Instructions
+## Pre-Installation
 
-- Install Node: http://nodejs.org/
-- Install Grunt: `npm install -g grunt-cli`
-- Clone this repository: `git@github.com:gregrickaby/genesis-sample.git`
-- Navigate to the cloned repository's directory:
-`cd /applications/MAMP/htdocs/genesis-sample`
-- Type: `npm install`
+Basic knowledge of the command line and the following must be installed on your local machine:
 
-The Node Package Manager will now install all the required dependencies for Grunt.
+* Node [http://nodejs.org/](http://nodejs.org/)
+* Grunt CLI `npm install -g grunt-cli`
 
-![How to use Grunt](http://i.imgur.com/D2yoFdu.gif)
+## Installation
 
-That's it! You're now ready to use Grunt!
+[Download](https://github.com/gregrickaby/genesis-sample/archive/master.zip) or [clone](https://github.com/gregrickaby/genesis-sample.git) this repository and place it into your theme directory:
 
-## Using Grunt
+```bash
+wordpress/wp-content/themes/genesis-sample
+```
 
-- `grunt styles` - Will compile Sass, auto prefix, css comb, and then minify style.css to style.min.css
-- `grunt javascript` - Will concatenate scripts, and then minify them
-- `grunt imageminnewer` - Will PNG Smush (optimize) all images
+Using the terminal, navigate to your theme directory:
 
-- `grunt` - Will run all tasks mentioned above
+```bash
+cd wordpress/wp-content/themes/genesis-sample
+```
 
-- `grunt watch` - Will watch for changes and then compile Sass and JS
+Install Grunt dependencies:
 
-## Better Script Management
+```bash
+npm install
+```
 
-I've created a `/js/` folder and inside it a `/partials/` folder. Any scripts placed into the partials folder will be concatenated and placed into `project.js` when you run `grunt` or `grunt javascript`.
+![How to use Grunt](https://dl.dropbox.com/s/hic5rpb6b5kv4i2/genesis-sample-theme-setup.gif?dl=0)
 
-This fork also enqueues Live Reload for extensionless live reloading while using Grunt Watch. It also does a check to see if the `SCRIPT_DEBUG` constant is present in `wp_config.php`.
+## Usage
 
-To load minified versions of styles and scripts add this to `wp_config.php`:
+```bash
+grunt watch
+```
 
-- `define('SCRIPT_DEBUG', TRUE);`  <-- will load un-minified files
-- `define('SCRIPT_DEBUG', FALSE);` <-- will load minified files
+Watch for changes and automatically refresh your browser using LiveReload.
 
-## Theme Support
+```bash
+grunt styles
+```
+Compile Sass, autoprefix, and then create a production ready stylesheet.
 
-Please visit http://my.studiopress.com/help/ for theme support.
+```bash
+grunt javascript
+```
+
+Concatenate scripts and create a production ready script.
+
+```bash
+grunt imageminnewer
+```
+
+Optimize images located in `/images`
+
+```bash
+grunt
+```
+
+Will run all tasks mentioned above.
+
+## Notes
+
+###Sass Mixins
+
+[Bourbon](http://bourbon.io/) is included! Now there is a large [library of Sass mixins](http://bourbon.io/docs/) that you can tap into.
+
+###Javascript
+
+All scripts placed into `/concat` will be concatenated and placed into `project.js`.
+
+### Script Management
+
+To load a development version (unminified) of styles and scripts add this to `wp_config.php`
+
+```bash
+define('SCRIPT_DEBUG', TRUE);
+```
+
+To load a production ready (minified) version of styles and scripts add this to `wp_config.php`
+
+```bash
+define('SCRIPT_DEBUG', FALSE);
+```
+
+## Support
+
+* For Genesis support, please visit [http://my.studiopress.com/help/](http://my.studiopress.com/help/)
+* For support with this theme, visit [https://github.com/gregrickaby/genesis-sample/issues](https://github.com/gregrickaby/genesis-sample/issues)
