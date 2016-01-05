@@ -36,7 +36,7 @@ cd wordpress/wp-content/themes/genesis-sample
 Install Grunt dependencies:
 
 ```bash
-npm install
+npm update
 ```
 
 ![How to use Grunt](https://dl.dropbox.com/s/hic5rpb6b5kv4i2/genesis-sample-theme-setup.gif?dl=0)
