@@ -20,8 +20,6 @@
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-sass-lint": "^1.1.1",
     "gulp-sort": "^1.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svgmin": "^1.2.1",
@@ -31,7 +29,10 @@
     "gulp-wp-pot": "^1.1.1",
     "gulp.spritesmith": "^6.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.2"
+  },
   "scripts": {
     "test": "echo \"No test specified\""
   },
